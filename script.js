@@ -30,10 +30,15 @@ $(document).ready(function() {
 	
 	//shuffle the deck
 	
+	_.shuffle(deck);
+
+
 	
-	var cards_player_1 = [];
-	var cards_player_2 = [];
+	var cards_player_1 = deck.slice(0,26);
+	var cards_player_2 = deck.slice(26,52);
 	//divide out the cards into the two arrays
+	console.log(cards_player_1.length);
+	console.log(cards_player_2.length);
 	
 	
 	//create a function (algorithm) called "war" that takes two cards as parameters, compares them and returns a winner. A tie should return false.
